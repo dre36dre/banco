@@ -10,5 +10,6 @@ public static void main(String[] args) {
 	
 	System.out.println("Titular: "+minhaConta.titular);
 	System.out.println("Saldo: "+ minhaConta.saldo);
+	System.out.println("Agencia: "+minhaConta.agencia);
 }
 }
