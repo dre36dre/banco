@@ -8,22 +8,27 @@ public static void main(String[] args) {
 	
 	Pessoa titular2= new Pessoa();
 	titular2.nome="Victor Hugo";
-	titular2 .documento="345678910";
+	titular2.documento="345678910";
 	
 	
 	
-	Conta minhaConta=new Conta();
-	minhaConta.titular=titular1;
-	minhaConta.agencia=123;
-	minhaConta.numero=987;
-	minhaConta.saldo=10_000;
+	Conta minhaConta=new Conta(titular1,123,321);
+//	minhaConta.titular=titular1;
+//	minhaConta.agencia=123;
+//	minhaConta.numero=987;
+	//minhaConta.saldo=10_000;
+	
+	minhaConta.depositar(30000);
+	minhaConta.sacar(2000);
+	
 	
 	Conta suaConta=new Conta();
 	suaConta.titular=titular2;
 	suaConta.agencia=623;
 	suaConta.numero=687;
-	suaConta.saldo=30_000;
-	
+	//suaConta.saldo=30_000;
+	suaConta.depositar(200000);
+	suaConta.sacar(1000);
 	
 	
 	System.out.println("Titular: "+minhaConta.titular.nome);
