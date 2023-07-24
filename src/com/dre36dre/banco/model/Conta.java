@@ -1,4 +1,4 @@
-package banco;
+package com.dre36dre.banco.model;
 
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ private int numero;
  
  
  
- Conta(Pessoa titular, int agencia, int numero){
+ public Conta(Pessoa titular, int agencia, int numero){
 	 Objects.requireNonNull(titular);
 	 this.titular=titular;
 	 this.agencia=agencia;
@@ -23,10 +23,10 @@ private int numero;
  
  
  
- void depositar(double valor) {
+ public void depositar(double valor) {
 	 saldo=saldo+valor;
  }
-void sacar(double valor) {
+public  void sacar(double valor) {
 	if(valor <=0) {
 		throw new IllegalArgumentException("Valor menor que 0");
 	}

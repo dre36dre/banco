@@ -1,4 +1,7 @@
-package banco;
+package com.dre36dre.banco.app;
+
+import com.dre36dre.banco.model.Conta;
+import com.dre36dre.banco.model.Pessoa;
 
 public class Principal {
 public static void main(String[] args) {
