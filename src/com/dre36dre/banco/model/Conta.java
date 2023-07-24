@@ -30,7 +30,7 @@ public  void sacar(double valor) {
 	if(valor <=0) {
 		throw new IllegalArgumentException("Valor menor que 0");
 	}
-	if(saldo- valor <0) {
+	if(getSaldoDisponivel() - valor <0) {
 		throw new IllegalArgumentException("Valor insuficiente");
 	}
 	saldo=saldo-valor;
@@ -63,7 +63,9 @@ public int getNumero() {
 	return numero;
 }
 
-
+public double getSaldoDisponivel() {
+	return getSaldo();
+}
 
 //void sacar(double valor, double taxaSaque) {
 //	sacar(valor, taxaSaque);
