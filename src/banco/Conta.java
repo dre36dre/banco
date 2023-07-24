@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Conta {
 	Pessoa titular;
-int agencia;
- double saldo ;
- int numero;
+private int agencia;
+private double saldo ;
+private int numero;
  
  Conta(){
 	 
@@ -35,6 +35,35 @@ void sacar(double valor) {
 	}
 	saldo=saldo-valor;
 }
+
+
+
+public Pessoa getTitular() {
+	return titular;
+}
+
+
+
+public void setTitular(Pessoa titular) {
+	this.titular = titular;
+}
+
+
+
+public int getAgencia() {
+	return agencia;
+}
+
+public double getSaldo() {
+	return saldo;
+}
+
+
+public int getNumero() {
+	return numero;
+}
+
+
 
 //void sacar(double valor, double taxaSaque) {
 //	sacar(valor, taxaSaque);
