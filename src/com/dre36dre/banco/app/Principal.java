@@ -1,5 +1,6 @@
 package com.dre36dre.banco.app;
 
+import com.dre36dre.banco.model.CaixaEletronico;
 import com.dre36dre.banco.model.Conta;
 import com.dre36dre.banco.model.ContaEspecial;
 import com.dre36dre.banco.model.ContaInvestimento;
@@ -17,6 +18,11 @@ public static void main(String[] args) {
 	nossaConta.creditarRendimento(0.8);
 	
 	ContaEspecial suaConta=new ContaEspecial(titular1, 0, 0, 1000);
+	CaixaEletronico caixaEletronico=new CaixaEletronico();
+	
+	
+	caixaEletronico.imprimirSaldo(suaConta);
+	caixaEletronico.imprimirSaldo(nossaConta);
 	
 	
 	Pessoa titular2= new Pessoa();
@@ -24,29 +30,21 @@ public static void main(String[] args) {
 	titular2.setDocumento("345678910");
 	
 	
-	
 	Conta minhaConta=new Conta(titular1,123,321);
 
 	
 	minhaConta.depositar(30000);
 	minhaConta.sacar(2000);
-	
-	
-//	Conta suaConta=new Conta(titular2, 623,687);
-	
 
 	
 	suaConta.depositar(20000);
 	suaConta.sacar(20500);
 	
 	
-	System.out.println("Titular: "+nossaConta.getTitular().getNome());
-	System.out.println("Saldo: "+ nossaConta.getSaldo());
-	System.out.println("Agencia: "+nossaConta.getAgencia());
-	System.out.println("============================================");
-//	System.out.println("Titular: "+suaConta.getTitular().getNome());
-	System.out.println("Saldo: "+ suaConta.getSaldo());
-//	System.out.println("Agencia: "+suaConta.getAgencia());
+	System.out.println("Agencia: "+suaConta.getAgencia());
+	
+	
+	
 	
 	}
 }
