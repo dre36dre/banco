@@ -2,7 +2,7 @@ package com.dre36dre.banco.model;
 
 import java.util.Objects;
 
-public class Conta {
+public abstract class Conta {
 	Pessoa titular;
 private int agencia;
 private double saldo ;
@@ -21,7 +21,7 @@ private int numero;
 	 this.numero=numero;
  }
  
- 
+ public abstract void debitarTarifaMensal();
  
  public void depositar(double valor) {
 	 saldo=saldo+valor;

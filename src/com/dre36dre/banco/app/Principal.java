@@ -30,8 +30,10 @@ public static void main(String[] args) {
 	titular2.setDocumento("345678910");
 	
 	
-	Conta minhaConta=new Conta(titular1,123,321);
+//	Conta minhaConta=new Conta(titular1,123,321);
 
+	Conta conta=suaConta;
+	conta.debitarTarifaMensal();
 	
 	minhaConta.depositar(30000);
 	minhaConta.sacar(2000);
