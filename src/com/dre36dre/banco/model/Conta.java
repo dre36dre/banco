@@ -13,6 +13,8 @@ private int numero;
  }
  
  
+ public abstract String getTipo();
+ 
  
  public Conta(Pessoa titular, int agencia, int numero){
 	 Objects.requireNonNull(titular);
@@ -21,7 +23,7 @@ private int numero;
 	 this.numero=numero;
  }
  
- public abstract void debitarTarifaMensal();
+//public abstract void debitarTarifaMensal();
  
  public void depositar(double valor) {
 	 saldo=saldo+valor;
@@ -67,10 +69,19 @@ public double getSaldoDisponivel() {
 	return getSaldo();
 }
 
-//void sacar(double valor, double taxaSaque) {
-//	sacar(valor, taxaSaque);
-//}
+public void transfere(double valor, Conta conta) {
+	this.sacar(valor);
+	conta.depositar(valor);
+}
 
+public String recuperaDadosParaImpressao() {
+	String dados = "Titular: " +this.titular;
+	dados += "\nNumero: " +this.numero;
+	dados += "\nAgência: " +this.agencia;
+	dados +=" \nSaldo: R$ " + this.saldo;
+	dados +="\nTipo: " +this.getTipo();
+	return dados;
+}
 
 
 }

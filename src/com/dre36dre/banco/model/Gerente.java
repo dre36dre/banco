@@ -1,11 +1,12 @@
 package com.dre36dre.banco.model;
 
-public class Gerente  extends Funcionario {
+public class Gerente  extends Funcionario implements Autenticavel {
 private int senha;
 private int numeroDeFuncionariosGerenciados;
 
-public double getBonificacao () {
-	return this.getSalario() * 0.15;
+@Override
+public void getBonificacao () {
+//	return super.getBonificacao() * 1.4 +1000;
 }
 
 public boolean autentica(int senha) {
