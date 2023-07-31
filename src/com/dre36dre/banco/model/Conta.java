@@ -9,8 +9,9 @@ private double saldo ;
 private int numero;
  
  Conta(){
-	 
- }
+	 }
+ 
+ 
  
  
  public abstract String getTipo();
@@ -22,6 +23,24 @@ private int numero;
 	 this.agencia=agencia;
 	 this.numero=numero;
  }
+ 
+ @Override
+public String toString() {
+	return "[titular=" + titular+ ",numero + "+numero+,"agencia=" +agencia + "]";
+}
+ 
+ 
+ public boolean equals(Objects obj) {
+	 if(obj == null) {
+		 return false;
+	 }
+	 
+	 Conta outraConta= (Conta) obj;
+	 
+	 return this.numero == outraConta.numero && this.agencia.equals(outraConta.agencia);
+ }
+ 
+ 
  
 //public abstract void debitarTarifaMensal();
  
