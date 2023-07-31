@@ -26,8 +26,12 @@ private int numero;
 //public abstract void debitarTarifaMensal();
  
  public void depositar(double valor) {
+	if(valor <0) {
+		throw new IllegalArgumentException("Você tentou depositar"+"um valor negativo") ;
+ }else {
 	 saldo=saldo+valor;
  }
+}
 public  void sacar(double valor) {
 	if(valor <=0) {
 		throw new IllegalArgumentException("Valor menor que 0");
