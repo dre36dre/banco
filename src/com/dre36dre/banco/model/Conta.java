@@ -26,7 +26,7 @@ private int numero;
  
  @Override
 public String toString() {
-	return "[titular=" + titular+ ",numero + "+numero+,"agencia=" +agencia + "]";
+	return "[titular=" + titular+ ",numero + "+numero+ "agencia=" +agencia + "]";
 }
  
  

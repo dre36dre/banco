@@ -6,7 +6,7 @@ private int numeroDeFuncionariosGerenciados;
 
 @Override
 public void getBonificacao () {
-//	return super.getBonificacao() * 1.4 +1000;
+	return super.getBonificacao() * 1.4 +1000;
 }
 
 public boolean autentica(int senha) {
