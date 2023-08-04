@@ -3,6 +3,13 @@ package com.dre36dre.banco.model;
 public class ManipuladorDeContas extends Conta {
 	
 	Conta conta=new Conta() {
+		
+		@Override
+		public String getTipo() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	}; {
 	};
 	
 public void criaConta(Evento evento) {
@@ -24,5 +31,11 @@ public void criaConta(Evento evento) {
 	public void transfere(double valor, Conta conta) {
 		Conta destino=(Conta) evento.getSelecionaNoCombo("destino");
 		conta.transfere(evento.getDouble("valorTransferencia"), destino);
+	}
+
+	@Override
+	public String getTipo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
