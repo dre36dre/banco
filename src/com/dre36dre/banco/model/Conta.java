@@ -5,7 +5,7 @@ import java.util.Objects;
 public abstract class Conta {
 	Pessoa titular;
 private int agencia;
-private double saldo ;
+protected double saldo ;
 private int numero;
  
  Conta(){

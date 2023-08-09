@@ -1,5 +1,8 @@
 package com.dre36dre.banco.model;
 
+import java.util.Collections;
+import java.util.List;
+
 public class ManipuladorDeContas extends Conta {
 	
 	Conta conta=new Conta() {
@@ -11,6 +14,14 @@ public class ManipuladorDeContas extends Conta {
 		}
 	}; {
 	};
+	
+	
+	public void ordenalista(Evento evento) {
+		List<Conta> contas=evento.getLista("destino");
+		Collections.sort(contas);
+	}
+	
+	
 	
 public void criaConta(Evento evento) {
 	String tipo= evento.getSelecionadoNoRadio();

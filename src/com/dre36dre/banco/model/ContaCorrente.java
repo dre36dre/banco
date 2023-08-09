@@ -1,6 +1,30 @@
 package com.dre36dre.banco.model;
 
-public class ContaCorrente extends Conta implements Tributavel  {
+public class ContaCorrente extends Conta implements Tributavel, Comparable<ContaCorrente>  {
+
+	public int CompareTo(ContaCorrente outra) {
+		if(this.saldo < outra.saldo) {
+			return -1;
+		}
+		
+		if(this.saldo > outra.saldo) {
+			return 1;
+		}
+		return 0;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public String getTipo() {
 		return "Conta corrente"; 
 	}
@@ -20,6 +44,11 @@ public class ContaCorrente extends Conta implements Tributavel  {
 	}
 	@Override
 	public double getValorTributavel() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int compareTo(ContaCorrente o) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
