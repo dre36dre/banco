@@ -2,7 +2,9 @@ package com.dre36dre.banco.app;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.dre36dre.banco.model.CaixaEletronico;
 import com.dre36dre.banco.model.Conta;
@@ -29,9 +31,22 @@ public class Principal {
 		contas.add(c2);
 		contas.add(c3);
 		
+		
+		c1.depositar(10000);
+		c2.depositar(3000);
+		
+		Map<String, ContaCorrente> mapaDeContas=new HashMap<>();
+		
+		mapaDeContas.put("diretor", c1);
+		mapaDeContas.put("gerente", c2);
+		
+		ContaCorrente contaDoDiretor=mapaDeContas.get("diretor");
+		System.out.println(contaDoDiretor.getSaldo());
+		
+		
 		Collections.sort(contas);
 		
-		
+		System.out.println(contas);
 		
 //		Gerente gerente= new Gerente();
 ////		gerente.setNome("Pedro Miguel");		
