@@ -34,6 +34,11 @@ public class Principal {
 		
 		c1.depositar(10000);
 		c2.depositar(3000);
+		c3.depositar(2000);
+		
+		Collections.sort(contas,(s1,s2)  -> Integer.compare(s1.length(),s2.length()));
+		
+		
 		
 		Map<String, ContaCorrente> mapaDeContas=new HashMap<>();
 		
