@@ -36,7 +36,9 @@ public class Principal {
 		c2.depositar(3000);
 		c3.depositar(2000);
 		
-		Collections.sort(contas,(s1,s2)  -> Integer.compare(s1.length(),s2.length()));
+		
+		
+//		contas.sort((s1,s2)  -> Integer.compare(s1.length() s2.length() ));
 		
 		
 		
